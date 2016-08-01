@@ -34,11 +34,49 @@ $font-family-content: 'Source Code Pro', monospace;
 
 
 body {
-  background-color: orange;
+  background-color: #34495e;
+}
+
+.card {
+  border: none;
 }
 
 .heading {
   font-family: $font-family-header;
-  color: blue;
+  color: #FFFFFF;
   font-weight: 900;
+}
+
+#online {
+  font-family: $font-family-header;
+  font-weight: 400;
+  color: #FFFFFF;
+  background-color: #2ecc71;
+}
+
+.online {
+  font-size: 2.0rem;
+  margin-left: 1.0rem;
+}
+
+#all-users {
+  font-family: $font-family-header;
+  font-weight: 400;
+  color: #FFFFFF;
+  background-color: #9b59b6;
+}
+
+.users {
+  font-size: 2.0rem;
+}
+
+#offline {
+  font-family: $font-family-header;
+  font-weight: 400;
+  color: #FFFFFF;
+  background-color: #e74c3c;
+}
+
+.offline {
+  font-size: 2.0rem;
 }
