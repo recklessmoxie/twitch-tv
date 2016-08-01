@@ -12,12 +12,46 @@
   <meta name="twitter:image:alt" content="Screen shot of the Twitch-Tv API Project">
   <title>Twitch-Tv API Project</title>
   <link rel="stylesheet" href="https://cask.scotch.io/bootstrap-4.0-flex.css">
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Source+Code+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900|Source+Code+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
   <div class="container">
     <h1 class="heading text-xs-center">Twitch Tv API</h1>
+    <div class="card-deck">
+    <div class="card">
+      <h4 class="card-header text-xs-center" id="online"> Currently Streaming <i class="material-icons md-light online"> live_tv</i>
+      </h4>
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title"> User Name Placeholder</h4>
+        <p class="card-text">This will contain whatever content the user is currently streaming</p>
+        <p class="card-text"><small class="text-muted"></small></p>
+      </div>
+    </div>
+    <div class="card">
+      <h4 class="card-header text-xs-center" id="all-users"> All Streamers <i class="material-icons md-light users pull-xs-right">people_outline</i>
+      </h4>
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title">User Name Placeholder</h4>
+        <p class="card-text">not sure what's going to live here yet.</p>
+        <p class="card-text"><small class="text-muted"></small></p>
+      </div>
+    </div>
+    <div class="card">
+      <h4 class="card-header text-xs-center" id="offline"> Currently Offline <i class="material-icons md-light offline">remove_circle_outline</i>
+      </h4>
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title">User Name Placeholder</h4>
+        <p class="card-text">not sure what's going to live here yet.</p>
+        <p class="card-text"><small class="text-muted"></small></p>
+      </div>
+    </div>
+  </div>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
