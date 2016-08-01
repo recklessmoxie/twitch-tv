@@ -1,40 +1,12 @@
 body {
-  background-color: #34495e; }
+  background-color: #bdc3c7; }
+
+.nav-pills .nav-link {
+  display: inline-block; }
 
 .card {
-  border: none; }
-
-.heading {
-  font-family: "Playfair Display", serif;
-  color: #FFFFFF;
-  font-weight: 900; }
-
-#online {
-  font-family: "Playfair Display", serif;
-  font-weight: 400;
-  color: #FFFFFF;
-  background-color: #2ecc71; }
-
-.online {
-  font-size: 2.0rem;
-  margin-left: 1.0rem; }
-
-#all-users {
-  font-family: "Playfair Display", serif;
-  font-weight: 400;
-  color: #FFFFFF;
-  background-color: #9b59b6; }
-
-.users {
-  font-size: 2.0rem; }
-
-#offline {
-  font-family: "Playfair Display", serif;
-  font-weight: 400;
-  color: #FFFFFF;
-  background-color: #e74c3c; }
-
-.offline {
-  font-size: 2.0rem; }
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 100px; }
 
 /*# sourceMappingURL=style.css.map */
