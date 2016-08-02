@@ -13,103 +13,31 @@
   <title>Twitch-Tv API Project</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.3/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900|Source+Code+Pro" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- <script src="https://use.fontawesome.com/5bec4f3dd9.js"></script> -->
 </head>
 <body>
   <div class="container">
     <div class="row">
-  <div class="card text-xs-center">
+  <div class="card">
     <div class="card-header">
       <div class="nav nav-pills card-header-pills text-xs-center">
-          <a class="nav-link active" href="#">Active</a>
-          <a class="nav-link" href="#">Link</a>
-          <a class="nav-link" href="#">Disabled</a>
+          <a class="nav-link online" href="#">
+            <img src="assets/user-check.svg"></a>
+            <a class="nav-link offline" href="#"><img src="assets/user-time.svg"></a>
+          <a class="nav-link invalid" href="#"><img src="assets/user-offline.svg"></a>
       </div>
     </div>
-    <div class="card-block">
+    <div class="card-block text-xs-center">
+      <div class="holder">
       <h4 class="card-title">Twitch Streamer Status</h4>
-      <p class="card-text">Sort streamers by current status above, or click below to see all streamers.</p>
-      <a href="#" class="btn btn-primary">See All</a>
+      <p class="card-text text-justify">Sort streamers by current status above, or click below to see all streamers.</p>
+      <a href="#" class="btn btn-info"><img src="assets/user-grp.svg"></a>
     </div>
-</div>
-</div>
-</div>
-  <!-- <div class="card text-xs-center">
-  <div class="card-header">
-    <ul class="nav nav-pills card-header-pills" role="tablist">
-      <li class="nav-item">
-        <a class="nav-link active" data-toggle="pill" href="#home" role="tab">Home</a>
-      </li>
-      <li class="nav-item">
-         <a class="nav-link" data-toggle="pill" href="#profile" role="tab">Profile</a>
-      </li>
-      <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#messages" role="tab">Messages</a>
-      </li>
-    </ul>
   </div>
-  <div class="card-block">
-    <h4 class="card-title text-xs-center">Special title treatment</h4>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-  </div>
-</div> -->
-          <!-- <div class="card text-xs-center">
-          <div class="card-header">
-          <ul class="nav nav-pills card-header-pills" role="tablist">
-            <li class="nav-item">
-            <a class="nav-link active" data-toggle="pill" href="#home" role="tab">Home</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" data-toggle="pill" href="#profile" role="tab">Profile</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" data-toggle="pill" href="#messages" role="tab">Messages</a>
-           </li>
-    </ul>
-  </div>
-      <div class="card card-block">
-  <h4 class="card-title text-xs-center">Special title treatment</h4>
-  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 </div>
 </div>
-</div> -->
-
-
-    <!-- <div class="card-deck">
-    <div class="card">
-      <h4 class="card-header text-xs-center" id="online"> Currently Streaming <i class="material-icons md-light online"> live_tv</i>
-      </h4>
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-block">
-        <h4 class="card-title"> User Name Placeholder</h4>
-        <p class="card-text">This will contain whatever content the user is currently streaming</p>
-        <p class="card-text"><small class="text-muted"></small></p>
-      </div>
-    </div>
-    <div class="card">
-      <h4 class="card-header text-xs-center" id="all-users"> All Streamers <i class="material-icons md-light users pull-xs-right">people_outline</i>
-      </h4>
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-block">
-        <h4 class="card-title">User Name Placeholder</h4>
-        <p class="card-text">not sure what's going to live here yet.</p>
-        <p class="card-text"><small class="text-muted"></small></p>
-      </div>
-    </div>
-    <div class="card">
-      <h4 class="card-header text-xs-center" id="offline"> Currently Offline <i class="material-icons md-light offline">remove_circle_outline</i>
-      </h4>
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-block">
-        <h4 class="card-title">User Name Placeholder</h4>
-        <p class="card-text">not sure what's going to live here yet.</p>
-        <p class="card-text"><small class="text-muted"></small></p>
-      </div>
-    </div>
-  </div> -->
-
+</div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>

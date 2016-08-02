@@ -1,12 +1,61 @@
 body {
-  background-color: #bdc3c7; }
+  background: url("http://www.freebiesgallery.com/wp-content/uploads/2014/02/blurred-background-20.jpg"); }
 
 .nav-pills .nav-link {
-  display: inline-block; }
+  display: inline-block;
+  border-radius: 50px;
+  padding: 0; }
 
 .card {
   width: 100%;
   max-width: 500px;
-  margin: 0 auto 100px; }
+  margin: 100px auto 100px auto;
+  border: none;
+  background-color: #9575CD; }
+
+.card-block {
+  padding: 0; }
+
+.holder {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto 50px auto;
+  background-color: #EDE7F6;
+  padding: 20px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
+
+.card-header {
+  background-color: #673AB7; }
+
+.nav-link .nav-pills {
+  border-radius: 50px;
+  padding: 0; }
+
+a.nav-link.online {
+  background-color: #26b999;
+  margin: 2px 60px 2px 0; }
+
+a.nav-link.offline {
+  background-color: #ffa54c;
+  margin: 2px 60px 2px 0; }
+
+a.nav-link.invalid {
+  background-color: #f05921;
+  margin: 2px 0 2px 0; }
+
+.card-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.75); }
+
+.card-text {
+  margin-top: 20px;
+  font-family: "Source Code Pro", monospace;
+  color: rgba(0, 0, 0, 0.54); }
+
+.btn.btn-info {
+  border-radius: 50px;
+  padding: 0;
+  background-color: #5C6BC0; }
 
 /*# sourceMappingURL=style.css.map */
