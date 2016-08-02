@@ -34,53 +34,74 @@ $font-family-content: 'Source Code Pro', monospace;
 
 
 body {
-  background-color: #bdc3c7;
+  background: url("http://www.freebiesgallery.com/wp-content/uploads/2014/02/blurred-background-20.jpg");
 }
 
 .nav-pills .nav-link {
   display: inline-block;
+  border-radius: 50px;
+  padding: 0;
 }
 
 .card {
   width: 100%;
   max-width: 500px;
-  margin: 0 auto 100px;
+  margin: 100px auto 100px auto;
+  border: none;
+  background-color: #9575CD;
 }
-//   font-family: $font-family-header;
-//   color: #FFFFFF;
-//   font-weight: 900;
-// }
-//
-// #online {
-//   font-family: $font-family-header;
-//   font-weight: 400;
-//   color: #FFFFFF;
-//   background-color: #2ecc71;
-// }
-//
-// .online {
-//   font-size: 2.0rem;
-//   margin-left: 1.0rem;
-// }
-//
-// #all-users {
-//   font-family: $font-family-header;
-//   font-weight: 400;
-//   color: #FFFFFF;
-//   background-color: #9b59b6;
-// }
-//
-// .users {
-//   font-size: 2.0rem;
-// }
-//
-// #offline {
-//   font-family: $font-family-header;
-//   font-weight: 400;
-//   color: #FFFFFF;
-//   background-color: #e74c3c;
-// }
-//
-// .offline {
-//   font-size: 2.0rem;
-// }
+
+.card-block{
+  padding: 0;
+}
+
+.holder {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto 50px auto;
+  background-color: #EDE7F6;
+  padding: 20px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.card-header {
+  background-color: #673AB7;
+}
+
+.nav-link .nav-pills {
+  border-radius: 50px;
+  padding: 0;
+}
+
+a.nav-link.online {
+  background-color: #26b999;
+  margin: 2px 60px 2px 0;
+}
+
+a.nav-link.offline {
+  background-color: #ffa54c;
+  margin: 2px 60px 2px 0;
+}
+
+a.nav-link.invalid {
+  background-color: #f05921;
+  margin: 2px 0 2px 0;
+}
+
+.card-title {
+  font-family: $font-family-header;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.card-text {
+  margin-top: 20px;
+  font-family: $font-family-content;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.btn.btn-info {
+  border-radius: 50px;
+  padding: 0;
+  background-color: #5C6BC0;
+}
