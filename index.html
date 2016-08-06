@@ -16,25 +16,59 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <!-- <script src="https://use.fontawesome.com/5bec4f3dd9.js"></script> -->
 </head>
+
+
 <body>
   <div class="container">
     <div class="row">
   <div class="card">
     <div class="card-header">
-      <div class="nav nav-pills card-header-pills text-xs-center">
-          <a class="nav-link online" href="#">
-            <img src="assets/user-check.svg"></a>
-            <a class="nav-link offline" href="#"><img src="assets/user-time.svg"></a>
-          <a class="nav-link invalid" href="#"><img src="assets/user-offline.svg"></a>
-      </div>
+        <ul class="nav nav-tabs card-header-tabs text-xs-center" id="myTab">
+          <li class="active">
+          <a class="nav-link online" data-toggle="tab" title="Online" href="#online" role="tab">
+            <span class="round-tabs one">
+            <img src="assets/user-check.svg">
+            </span>
+          </a>
+          </li>
+          <li>
+            <a class="nav-link offline" data-toggle="tab" title="Offline" href="#offline" role="tab">
+               <span class="round-tabs two">
+              <img src="assets/user-time.svg">
+            </span>
+            </a>
+          </li>
+          <li>
+          <a class="nav-link noAcct" data-toggle="tab" title="No Account" href="#noAcct" role="tab">
+            <span class="round-tabs three">
+            <img src="assets/user-offline.svg">
+          </span>
+          </a>
+        </li>
+      </ul>
     </div>
+
     <div class="card-block text-xs-center">
       <div class="holder">
       <h4 class="card-title">Twitch Streamer Status</h4>
-      <p class="card-text text-justify">Sort streamers by current status above, or click below to see all streamers.</p>
-      <a href="#" class="btn btn-info"><img src="assets/user-grp.svg"></a>
+      <p class="card-text text-justify">Sort streaming users by current status above, or click below to see all streamers.</p>
+      <div class="tab-content">
+        <div class="tab-pane fade" id="online" role="tabpanel">
+          <p> content for first pill </p>
+        </div>
+        <div class="tab-pane fade" id="offline" role="tabpanel">
+          <p> Second pill content </p>
+        </div>
+        <div class="tab-pane fade" id="noAcct" role="tabpanel">
+          <p> Third pill contents </p>
+        </div>
+    </div>
+      <a href="#all" class="nav-link btn btn-info">
+        <img src="assets/user-grp.svg">
+      </a>
     </div>
   </div>
+</div>
 </div>
 </div>
 </div>

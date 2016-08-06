@@ -1,20 +1,88 @@
 body {
   background: url("http://res.cloudinary.com/recklessmoxie/image/upload/q_100/v1470446769/blue_ivvwzq.png"); }
 
-.nav-pills .nav-link {
+.nav-tabs .nav-link {
   display: inline-block;
-  border-radius: 50px;
+  border: 0;
   padding: 0; }
 
 .card {
-  width: 100%;
-  max-width: 500px;
-  margin: 100px auto 100px auto;
+  width: 75%;
+  margin: 60px auto;
+  height: 500px;
   border: none;
   background-color: #9575CD;
   -webkit-box-shadow: -12px 8px 14px -6px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -12px 8px 14px -6px rgba(0, 0, 0, 0.75);
   box-shadow: -12px 8px 14px -6px rgba(0, 0, 0, 0.75); }
+
+.nav-tabs {
+  position: relative;
+  border-bottom: 0;
+  width: 80%;
+  margin: 20px auto;
+  box-sizing: border-box; }
+
+.card-header {
+  background-color: #673AB7;
+  padding: 1px; }
+
+.nav-tabs .nav-item.open .nav-link, .nav-tabs .nav-item.open .nav-link:focus, .nav-tabs .nav-item.open .nav-link:hover, .nav-tabs .nav-link.active, .nav-tabs .nav-link.active:focus, .nav-tabs .nav-link.active:hover {
+  color: #55595c;
+  cursor: default;
+  background-color: inherit;
+  border-color: transparent;
+  border: 0; }
+
+span.round-tabs {
+  display: inline-block;
+  border-radius: 50px;
+  background: white;
+  left: 0;
+  text-align: center;
+  font-size: 35px; }
+
+span.round-tabs.one {
+  color: #26b999;
+  border: 4px solid #26b999; }
+
+li.active span.round-tabs.one {
+  background: #fff !important;
+  border: 4px solid #ddd; }
+
+span.round-tabs.two {
+  color: #ffa54c;
+  border: 4px solid #ffa54c; }
+
+li.active span.round-tabs.two {
+  background: #fff !important;
+  border: 4px solid #ddd; }
+
+span.round-tabs.three {
+  color: #f05921;
+  border: 3px solid #f05921; }
+
+li.active span.round-tabs.three {
+  background: #fff !important;
+  border: 2px solid #ddd;
+  color: #f05921; }
+
+.nav-tabs > li {
+  flex: 1;
+  width: 20%; }
+
+.nav-tabs {
+  display: flex; }
+
+.nav-tabs > li a {
+  width: 70px;
+  height: 70px;
+  margin: 20px auto;
+  border-radius: 100%;
+  padding: 0; }
+
+.nav-tabs > li a img:hover {
+  background: transparent; }
 
 .card-block {
   padding: 0; }
@@ -26,25 +94,6 @@ body {
   background-color: #EDE7F6;
   padding: 20px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
-
-.card-header {
-  background-color: #673AB7; }
-
-.nav-link .nav-pills {
-  border-radius: 50px;
-  padding: 0; }
-
-a.nav-link.online {
-  background-color: #26b999;
-  margin: 2px 60px 2px 0; }
-
-a.nav-link.offline {
-  background-color: #ffa54c;
-  margin: 2px 60px 2px 0; }
-
-a.nav-link.invalid {
-  background-color: #f05921;
-  margin: 2px 0 2px 0; }
 
 .card-title {
   font-family: "Playfair Display", serif;
