@@ -34,7 +34,7 @@ $font-family-content: 'Source Code Pro', monospace;
 
 
 body {
-  background: url("http://www.freebiesgallery.com/wp-content/uploads/2014/02/blurred-background-20.jpg");
+  background: url("http://res.cloudinary.com/recklessmoxie/image/upload/q_100/v1470446769/blue_ivvwzq.png");
 }
 
 .nav-pills .nav-link {
@@ -49,6 +49,9 @@ body {
   margin: 100px auto 100px auto;
   border: none;
   background-color: #9575CD;
+  -webkit-box-shadow: -12px 8px 14px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: -12px 8px 14px -6px rgba(0,0,0,0.75);
+  box-shadow: -12px 8px 14px -6px rgba(0,0,0,0.75);
 }
 
 .card-block{
