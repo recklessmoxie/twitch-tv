@@ -1,40 +1,93 @@
 
-
-
-// Grid breakpoints
-//
-// Define the minimum dimensions at which your layout will change,
-// adapting to different screen sizes, for use in media queries.
+$grid-columns:      12;
+$grid-gutter-width: 30px;
 
 $grid-breakpoints: (
+  // Extra small screen / phone
   xs: 0,
+  // Small screen / phone
   sm: 544px,
+  // Medium screen / tablet
   md: 768px,
+  // Large screen / desktop
   lg: 992px,
+  // Extra large screen / wide desktop
   xl: 1200px
-) !default;
-
-
-// Grid containers
-//
-// Define the maximum width of `.container` for different screen sizes.
+);
 
 $container-max-widths: (
   sm: 576px,
   md: 720px,
   lg: 940px,
   xl: 1140px
-) !default;
+);
 
+// Centered container element
+@mixin make-container($gutter: $grid-gutter-width)
+{
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+}
 
-// @include _assert-ascending($container-max-widths, "$container-max-widths");
-// @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+// Creates a wrapper for a series of columns
+@mixin make-row($gutter: $grid-gutter-width) {
+  margin-left:  ($gutter / -2);
+  margin-right: ($gutter / -2);
+}
+
+@mixin make-col($gutter: $grid-gutter-width) {
+    position: relative;
+    float: left;
+    min-height: 1px;
+    padding-right: ($gutter / 2);
+    padding-left: ($gutter / 2);
+  }
+
+  @mixin make-col-span($columns)
+  {
+    width: percentage(($columns / $grid-columns));
+  }
+  @mixin make-col-offset($columns)
+  {
+    margin-left: percentage(($columns / $grid-columns));
+  }
+  @mixin make-col-push($columns)
+  {
+    left: percentage(($columns / $grid-columns));
+  }
+  @mixin make-col-pull($columns)
+  {
+    right: percentage(($columns / $grid-columns));
+  }
+
 $font-family-header: 'Playfair Display', serif;
 $font-family-content: 'Source Code Pro', monospace;
 
 
 body {
   background: url("http://res.cloudinary.com/recklessmoxie/image/upload/q_100/v1470446769/blue_ivvwzq.png");
+}
+
+.container {
+  @include make-container();
+}
+
+.row {
+  @include make-row();
+}
+
+.content-main {
+  @include make-col();
+
+  @media (max-width: 32em) {
+    @include make-col-span(12);
+  }
+
+  @media (min-width: 32.1em) {
+    @include make-col-span(12);
+  }
 }
 
 .nav-tabs .nav-link {
@@ -44,9 +97,10 @@ body {
 }
 
 .card {
-  width: 75%;
-  margin: 60px auto;
-  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  height: 600px;
   border: none;
   background-color: #9575CD;
   -webkit-box-shadow: -12px 8px 14px -6px rgba(0,0,0,0.75);
@@ -55,12 +109,9 @@ body {
 }
 
 .nav-tabs {
-    position: relative;
     border-bottom: 0;
-    width: 80%;
-    margin: 20px auto;
-    box-sizing: border-box;
-}
+    margin: 5px auto;
+  }
 
 .card-header {
     background-color: #673AB7;
@@ -84,65 +135,64 @@ span.round-tabs {
     font-size: 35px;
 }
 
-span.round-tabs.one{
+span.round-tabs.one {
+  color: #3498db;
+  border: 4px solid #3498db;
+}
+
+li.active span.round-tabs.one {
+  background: #fff !important;
+  border: 4px solid #ddd;
+}
+
+span.round-tabs.two {
     color: rgb(38, 185, 153);
     border: 4px solid rgb(38, 185, 153);
 }
 
-li.active span.round-tabs.one{
+li.active span.round-tabs.two {
     background: #fff !important;
     border: 4px solid #ddd;
 }
 
-span.round-tabs.two{
+span.round-tabs.three{
     color: #ffa54c;
     border: 4px solid #ffa54c;
 }
 
-li.active span.round-tabs.two{
+li.active span.round-tabs.three{
     background: #fff !important;
     border: 4px solid #ddd;
   }
 
-span.round-tabs.three{
+span.round-tabs.four{
     color: #f05921;
     border: 4px solid #f05921;
 }
 
-li.active span.round-tabs.three{
+li.active span.round-tabs.four{
     background: #fff !important;
     border: 4px solid #ddd;
 }
 
 .nav-tabs > li {
     flex: 1;
-    width: 20%;
 }
 
 .nav-tabs {
     display: flex;
 }
 
-.nav-tabs > li a {
-   width: 70px;
-   height: 70px;
-   margin: 20px auto;
-   border-radius: 100%;
-   padding: 0;
-}
-
 .nav-tabs > li a img:hover{
     background: transparent;
 }
 
-.card-block{
-  padding: 0;
+.card-block {
+margin-top: 50px;
 }
 
 .holder {
-  width: 100%;
-  max-width: 400px;
-  margin: 50px auto 50px auto;
+  max-width: 250px;
   background-color: #EDE7F6;
   padding: 20px;
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
@@ -158,10 +208,4 @@ li.active span.round-tabs.three{
   margin-top: 20px;
   font-family: $font-family-content;
   color: rgba(0, 0, 0, 0.54);
-}
-
-.btn.btn-info {
-  border-radius: 50px;
-  padding: 0;
-  background-color: #5C6BC0;
 }
