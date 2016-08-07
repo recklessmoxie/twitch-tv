@@ -1,29 +1,6 @@
 body {
   background: url("http://res.cloudinary.com/recklessmoxie/image/upload/q_100/v1470446769/blue_ivvwzq.png"); }
 
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px; }
-
-.row {
-  margin-left: -15px;
-  margin-right: -15px; }
-
-.content-main {
-  position: relative;
-  float: left;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px; }
-  @media (max-width: 32em) {
-    .content-main {
-      width: 100%; } }
-  @media (min-width: 32.1em) {
-    .content-main {
-      width: 100%; } }
-
 .nav-tabs .nav-link {
   display: inline-block;
   border: 0;
@@ -40,15 +17,24 @@ body {
   -moz-box-shadow: -12px 8px 14px -6px rgba(0, 0, 0, 0.75);
   box-shadow: -12px 8px 14px -6px rgba(0, 0, 0, 0.75); }
 
-.nav-tabs {
+.nav {
+  padding-left: 0; }
+
+.nav-tabs .nav-item {
   border-bottom: 0;
-  margin: 5px auto; }
+  width: 10%;
+  margin-top: 1.0em;
+  margin-bottom: 1.0em;
+  margin-left: 6.0em;
+  padding: 0.5em;
+  box-sizing: border-box; }
 
 .card-header {
   background-color: #673AB7;
-  padding: 1px; }
+  padding: 0;
+  width: 100%; }
 
-.nav-tabs .nav-item.open .nav-link, .nav-tabs .nav-item.open .nav-link:focus, .nav-tabs .nav-item.open .nav-link:hover, .nav-tabs .nav-link.active, .nav-tabs .nav-link.active:focus, .nav-tabs .nav-link.active:hover {
+.nav-tabs .nav-link, .nav-tabs, .nav-tabs, .nav-tabs .nav-link.active, .nav-tabs .nav-link.active:focus, .nav-tabs .nav-link.active:hover {
   color: #55595c;
   cursor: default;
   background-color: inherit;
@@ -59,47 +45,27 @@ span.round-tabs {
   display: inline-block;
   border-radius: 50px;
   background: white;
-  left: 0;
-  text-align: center;
-  font-size: 35px; }
+  left: 0; }
 
 span.round-tabs.one {
   color: #3498db;
   border: 4px solid #3498db; }
 
-li.active span.round-tabs.one {
-  background: #fff !important;
-  border: 4px solid #ddd; }
-
 span.round-tabs.two {
   color: #26b999;
   border: 4px solid #26b999; }
-
-li.active span.round-tabs.two {
-  background: #fff !important;
-  border: 4px solid #ddd; }
 
 span.round-tabs.three {
   color: #ffa54c;
   border: 4px solid #ffa54c; }
 
-li.active span.round-tabs.three {
-  background: #fff !important;
-  border: 4px solid #ddd; }
-
 span.round-tabs.four {
   color: #f05921;
   border: 4px solid #f05921; }
 
-li.active span.round-tabs.four {
-  background: #fff !important;
+span.round-tabs:hover {
+  color: #fff !important;
   border: 4px solid #ddd; }
-
-.nav-tabs > li {
-  flex: 1; }
-
-.nav-tabs {
-  display: flex; }
 
 .nav-tabs > li a img:hover {
   background: transparent; }
@@ -108,7 +74,7 @@ li.active span.round-tabs.four {
   margin-top: 50px; }
 
 .holder {
-  max-width: 250px;
+  max-width: 400px;
   background-color: #EDE7F6;
   padding: 20px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
