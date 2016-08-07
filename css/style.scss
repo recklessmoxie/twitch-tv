@@ -1,67 +1,4 @@
 
-$grid-columns:      12;
-$grid-gutter-width: 30px;
-
-$grid-breakpoints: (
-  // Extra small screen / phone
-  xs: 0,
-  // Small screen / phone
-  sm: 544px,
-  // Medium screen / tablet
-  md: 768px,
-  // Large screen / desktop
-  lg: 992px,
-  // Extra large screen / wide desktop
-  xl: 1200px
-);
-
-$container-max-widths: (
-  sm: 576px,
-  md: 720px,
-  lg: 940px,
-  xl: 1140px
-);
-
-// Centered container element
-@mixin make-container($gutter: $grid-gutter-width)
-{
-  margin-right: auto;
-  margin-left: auto;
-  padding-left:  ($gutter / 2);
-  padding-right: ($gutter / 2);
-}
-
-// Creates a wrapper for a series of columns
-@mixin make-row($gutter: $grid-gutter-width) {
-  margin-left:  ($gutter / -2);
-  margin-right: ($gutter / -2);
-}
-
-@mixin make-col($gutter: $grid-gutter-width) {
-    position: relative;
-    float: left;
-    min-height: 1px;
-    padding-right: ($gutter / 2);
-    padding-left: ($gutter / 2);
-  }
-
-  @mixin make-col-span($columns)
-  {
-    width: percentage(($columns / $grid-columns));
-  }
-  @mixin make-col-offset($columns)
-  {
-    margin-left: percentage(($columns / $grid-columns));
-  }
-  @mixin make-col-push($columns)
-  {
-    left: percentage(($columns / $grid-columns));
-  }
-  @mixin make-col-pull($columns)
-  {
-    right: percentage(($columns / $grid-columns));
-  }
-
 $font-family-header: 'Playfair Display', serif;
 $font-family-content: 'Source Code Pro', monospace;
 
@@ -71,24 +8,8 @@ body {
 }
 
 .container {
-  @include make-container();
-}
 
-.row {
-  @include make-row();
-}
-
-.content-main {
-  @include make-col();
-
-  @media (max-width: 32em) {
-    @include make-col-span(12);
   }
-
-  @media (min-width: 32.1em) {
-    @include make-col-span(12);
-  }
-}
 
 .nav-tabs .nav-link {
   display: inline-block;
@@ -108,17 +29,27 @@ body {
   box-shadow: -12px 8px 14px -6px rgba(0,0,0,0.75);
 }
 
-.nav-tabs {
-    border-bottom: 0;
-    margin: 5px auto;
+.nav {
+padding-left: 0;
+}
+
+.nav-tabs .nav-item {
+  border-bottom: 0;
+  width: 10%;
+  margin-top: 1.0em;
+  margin-bottom: 1.0em;
+  margin-left: 6.0em;
+  padding: 0.5em;
+  box-sizing: border-box;
   }
 
 .card-header {
     background-color: #673AB7;
-    padding: 1px;
+    padding: 0;
+    width: 100%;
 }
 
-  .nav-tabs .nav-item.open .nav-link, .nav-tabs .nav-item.open .nav-link:focus, .nav-tabs .nav-item.open .nav-link:hover, .nav-tabs .nav-link.active, .nav-tabs .nav-link.active:focus, .nav-tabs .nav-link.active:hover {
+  .nav-tabs .nav-link, .nav-tabs, .nav-tabs, .nav-tabs .nav-link.active, .nav-tabs .nav-link.active:focus, .nav-tabs .nav-link.active:hover {
       color: #55595c;
       cursor: default;
       background-color: inherit;
@@ -131,8 +62,6 @@ span.round-tabs {
     border-radius: 50px;
     background: white;
     left: 0;
-    text-align: center;
-    font-size: 35px;
 }
 
 span.round-tabs.one {
@@ -140,19 +69,9 @@ span.round-tabs.one {
   border: 4px solid #3498db;
 }
 
-li.active span.round-tabs.one {
-  background: #fff !important;
-  border: 4px solid #ddd;
-}
-
 span.round-tabs.two {
     color: rgb(38, 185, 153);
     border: 4px solid rgb(38, 185, 153);
-}
-
-li.active span.round-tabs.two {
-    background: #fff !important;
-    border: 4px solid #ddd;
 }
 
 span.round-tabs.three{
@@ -160,27 +79,14 @@ span.round-tabs.three{
     border: 4px solid #ffa54c;
 }
 
-li.active span.round-tabs.three{
-    background: #fff !important;
-    border: 4px solid #ddd;
-  }
-
 span.round-tabs.four{
     color: #f05921;
     border: 4px solid #f05921;
 }
 
-li.active span.round-tabs.four{
-    background: #fff !important;
-    border: 4px solid #ddd;
-}
-
-.nav-tabs > li {
-    flex: 1;
-}
-
-.nav-tabs {
-    display: flex;
+span.round-tabs:hover {
+  color: #fff !important;
+  border: 4px solid #ddd;
 }
 
 .nav-tabs > li a img:hover{
@@ -192,7 +98,7 @@ margin-top: 50px;
 }
 
 .holder {
-  max-width: 250px;
+  max-width: 400px;
   background-color: #EDE7F6;
   padding: 20px;
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
