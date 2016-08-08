@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,7 +24,7 @@
       <div class="card-header">
         <ul class="nav nav-tabs card-header-tabs" id="myTab">
           <li class="nav-item active d-inline-block">
-            <a class="nav-link" data-toggle="tab" title="Streamers" href="#all" role="tab">
+            <a class="nav-link" data-toggle="tab" title="All Streamers" href="#all" role="tab">
               <span class="round-tabs one">
               <img src="assets/user-grp.svg">
             </span>
@@ -38,133 +39,185 @@
           </li>
           <li class="nav-item d-inline-block">
             <a class="nav-link offline" data-toggle="tab" title="Offline" href="#offline" role="tab">
-               <span class="round-tabs three">
+              <span class="round-tabs three">
               <img src="assets/user-time.svg">
             </span>
             </a>
           </li>
           <li class="nav-item d-inline-block">
-          <a class="nav-link noAcct" data-toggle="tab" title="No Account" href="#noAcct" role="tab">
-            <span class="round-tabs four">
+            <a class="nav-link noAcct" data-toggle="tab" title="No Account" href="#noAcct" role="tab">
+              <span class="round-tabs four">
             <img src="assets/user-offline.svg">
           </span>
-          </a>
-        </li>
-    </ul>
-</div>
-
-            <div class="tab-content">
-                <div class="tab-pane fade active" id="all" role="tabpanel">
-            <div class="card" id="status">
-            <div class="card-block text-xs-center">
-            <h4 class="card-title">Twitch Streamer Status</h4>
-            <p class="card-text">View Twitch streamers according to their current status using the icons above, or click below to see all streaming users.</p>
-            <a class="btn btn-success users" href="#all-users">All Users</a>
-          </div>
-        </div>
-        <div class="card" id="all-users">
-            <div class="card-block">
-              <button type="button" id="close" class="close pull-xs-right" aria-label="Close"><span aria-hidden="true">&times;</span>
-            </button>
-                <h4 class="card-title text-xs-center">All Twitch Streamers</h4>
-                <p class="card-text"> Dummy content for viewing</p>
-      <div class="card-deck-wrapper">
-      <div class="card-deck">
-        <div class="card">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-block">
-            <h4 class="card-title">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card">
-<img class="card-img-top" src="..." alt="Card image cap">
-<div class="card-block">
-<h4 class="card-title">Card title</h4>
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-<a href="#" class="btn btn-primary">Go somewhere</a>
-</div>
-</div>
-<div class="card">
-<img class="card-img-top">
-<div class="card-block">
-<h4 class="card-title">User Name</h4>
-<p class="card-text">Content of users current live stream</p>
-<a href="#" class="btn btn-primary">View Live Stream</a>
-</div>
-</div>
-<div class="card">
-<img class="card-img-top">
-<div class="card-block">
-<h4 class="card-title">User Name</h4>
-<p class="card-text">Content of users current live stream</p>
-<a href="#" class="btn btn-primary">View Live Stream</a>
-</div>
-</div>
-    </div>
-  </div>
-    <div class="card-deck-wrapper">
-    <div class="card-deck">
-      <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-block">
-          <h4 class="card-title">Card title</h4>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="card">
-<img class="card-img-top" src="..." alt="Card image cap">
-<div class="card-block">
-<h4 class="card-title">Card title</h4>
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-<a href="#" class="btn btn-primary">Go somewhere</a>
-</div>
-</div>
-<div class="card">
-<img class="card-img-top">
-<div class="card-block">
-<h4 class="card-title">User Name</h4>
-<p class="card-text">Content of users current live stream</p>
-<a href="#" class="btn btn-primary">View Live Stream</a>
-</div>
-</div>
-<div class="card">
-<img class="card-img-top">
-<div class="card-block">
-<h4 class="card-title">User Name</h4>
-<p class="card-text">Content of users current live stream</p>
-<a href="#" class="btn btn-primary">View Live Stream</a>
-</div>
-</div>
-  </div>
+
+      <div class="tab-content text-xs-center">
+        <div class="tab-pane fade active" id="all" role="tabpanel">
+          <div class="card status" id="status">
+            <div class="card-block">
+              <h4 class="card-title text-xs-center">Twitch Status</h4>
+              <p class="card-text">View Twitch streamers sorted by current status using the icons above, or click below for all users.</p>
+              <a class="btn btn-success users" href="#all-users">All Users</a>
+            </div>
+          </div>
+          <div class="card all-users" id="all-users">
+            <div class="card-block">
+              <button type="button" id="close-1" class="close pull-xs-right" aria-label="Close"><span aria-hidden="true">&times;</span>
+            </button>
+              <h4 class="card-title text-xs-center">All Twitch Streamers</h4>
+            </div>
+            <div class="card-deck-wrapper">
+              <div class="card-deck">
+                <div class="card">
+                  <img class="card-img-top">
+                  <div class="card-block">
+                    <h4 class="card-title text-xs-center">Card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top">
+                  <div class="card-block">
+                    <h4 class="card-title text-xs-center">Card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top">
+                  <div class="card-block">
+                    <h4 class="card-title text-xs-center">Card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top">
+                  <div class="card-block">
+                    <h4 class="card-title text-xs-center">Card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-deck-wrapper">
+              <div class="card-deck">
+                <div class="card">
+                  <img class="card-img-top">
+                  <div class="card-block">
+                    <h4 class="card-title text-xs-center">Card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top">
+                  <div class="card-block">
+                    <h4 class="card-title text-xs-center">Card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top">
+                  <div class="card-block">
+                    <h4 class="card-title text-xs-center">Card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top">
+                  <div class="card-block">
+                    <h4 class="card-title text-xs-center">Card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
         <div class="tab-pane fade" id="online" role="tabpanel">
-          <p> content for first pill </p>
+          <div class="card status" id="status-on">
+            <div class="card-block">
+              <h4 class="card-title text-xs-center">Twitch Status</h4>
+              <p class="card-text">Click below to view users currently live-streaming content.</p>
+              <a class="btn btn-success show-on-users" href="#status-on">Live Streaming</a>
+            </div>
+          </div>
+          <div class="card all-users" id="online-users">
+            <div class="card-block">
+              <button type="button" id="close-2" class="close pull-xs-right" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+              <h4 class="card-title text-xs-center">Currently Live Streaming</h4>
+            </div>
+            <div class="card-deck-wrapper user-list">
+              <div class="card-deck">
+                <div class="card">
+                  <img class="card-img-top">
+                  <div class="card-block">
+                    <h4 class="card-title text-xs-center">Card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top">
+                  <div class="card-block">
+                    <h4 class="card-title text-xs-center">Card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top">
+                  <div class="card-block">
+                    <h4 class="card-title text-xs-center">Card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top">
+                  <div class="card-block">
+                    <h4 class="card-title text-xs-center">Card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+          </div>
         </div>
+      </div>
         <div class="tab-pane fade" id="offline" role="tabpanel">
-          <p> Second pill content </p>
+          <div class="card status" id="status-off">
+            <div class="card-block">
+              <h4 class="card-title text-xs-center">Currently Offline</h4>
+          </div>
+        </div>
         </div>
         <div class="tab-pane fade" id="noAcct" role="tabpanel">
-          <p> Third pill contents </p>
+          <div class="card status" id="status-no">
+            <div class="card-block">
+          <h4 class="card-title text-xs-center">No Account</h4>
+          <p class="card-text"> These user-names do not currently have a valid Twitch account. </p>
         </div>
-</div>
-</div>
-</div>
-
-
-
-
-
+      </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.3/js/bootstrap.min.js"></script>
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
+
 </html>

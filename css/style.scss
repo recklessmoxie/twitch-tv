@@ -7,7 +7,7 @@ body {
   background: url("http://res.cloudinary.com/recklessmoxie/image/upload/q_100/v1470446769/blue_ivvwzq.png");
 }
 
-#main.card {
+#main {
   margin-left: auto;
   margin-right: auto;
   margin-top: 80px;
@@ -17,12 +17,6 @@ body {
   -moz-box-shadow: -12px 8px 14px -6px rgba(0,0,0,0.75);
   box-shadow: -12px 8px 14px -6px rgba(0,0,0,0.75);
 }
-
-.nav-tabs .nav-item {
-  float: none;
-  border-bottom: 0;
-  margin-bottom: .5em;
-  }
 
 li.nav-item {
   margin-top: .5em;
@@ -73,41 +67,23 @@ span.round-tabs:hover {
   border: 4px solid #ddd;
 }
 
-.nav-tabs > li a img:hover{
-    background: transparent;
+.users {
+  float:right;
 }
 
-.card-wrapper {
-margin-top: 0em;
-margin-bottom: 4em;
-padding: 5px;
-}
-
-#status {
-  margin-left: 5em;
-  margin-top: 4em;
-  width: 60em;
+.status {
+  display: inline-block;
+  width: 600px;
+  margin: 1.5em;
   background-color: #EDE7F6;
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
-#all-users {
+.all-users {
   display: inline-block;
   margin: 2em;
   background-color: #EDE7F6;
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-  overflow:auto;
-}
-
-.close {
-  font-size: 2.5rem;
-  color: black;
-}
-
-.tab-content {
-  width: 100%;
-  height: 400px;
-  margin-top: 0;
 }
 
 .card-title {
