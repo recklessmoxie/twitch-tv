@@ -14,38 +14,36 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.3/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900|Source+Code+Pro" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <!-- <script src="https://use.fontawesome.com/5bec4f3dd9.js"></script> -->
 </head>
 
 
 <body>
   <div class="container">
-    <div class="content-main">
-    <div class="card">
+    <div class="card" id="main">
       <div class="card-header">
-        <ul class="nav nav-tabs card-header-tabs text-xs-center" id="myTab">
-          <li class="nav-item active">
+        <ul class="nav nav-tabs card-header-tabs" id="myTab">
+          <li class="nav-item active d-inline-block">
             <a class="nav-link" data-toggle="tab" title="Streamers" href="#all" role="tab">
               <span class="round-tabs one">
               <img src="assets/user-grp.svg">
             </span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-inline-block">
             <a class="nav-link online" data-toggle="tab" title="Online" href="#online" role="tab">
               <span class="round-tabs two">
               <img src="assets/user-check.svg">
               </span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-inline-block">
             <a class="nav-link offline" data-toggle="tab" title="Offline" href="#offline" role="tab">
                <span class="round-tabs three">
               <img src="assets/user-time.svg">
             </span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-inline-block">
           <a class="nav-link noAcct" data-toggle="tab" title="No Account" href="#noAcct" role="tab">
             <span class="round-tabs four">
             <img src="assets/user-offline.svg">
@@ -54,14 +52,98 @@
         </li>
     </ul>
 </div>
-          <div class="card-block text-xs-center">
+
             <div class="tab-content">
                 <div class="tab-pane fade active" id="all" role="tabpanel">
-                  <div class="holder">
+            <div class="card" id="status">
+            <div class="card-block text-xs-center">
             <h4 class="card-title">Twitch Streamer Status</h4>
-            <p class="card-text text-justify">Sort streaming users by current status above, or click below to see all streamers.</p>
+            <p class="card-text">View Twitch streamers according to their current status using the icons above, or click below to see all streaming users.</p>
+            <a class="btn btn-success users" href="#all-users">All Users</a>
           </div>
         </div>
+        <div class="card" id="all-users">
+            <div class="card-block">
+              <button type="button" id="close" class="close pull-xs-right" aria-label="Close"><span aria-hidden="true">&times;</span>
+            </button>
+                <h4 class="card-title text-xs-center">All Twitch Streamers</h4>
+                <p class="card-text"> Dummy content for viewing</p>
+      <div class="card-deck-wrapper">
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card">
+<img class="card-img-top" src="..." alt="Card image cap">
+<div class="card-block">
+<h4 class="card-title">Card title</h4>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<a href="#" class="btn btn-primary">Go somewhere</a>
+</div>
+</div>
+<div class="card">
+<img class="card-img-top">
+<div class="card-block">
+<h4 class="card-title">User Name</h4>
+<p class="card-text">Content of users current live stream</p>
+<a href="#" class="btn btn-primary">View Live Stream</a>
+</div>
+</div>
+<div class="card">
+<img class="card-img-top">
+<div class="card-block">
+<h4 class="card-title">User Name</h4>
+<p class="card-text">Content of users current live stream</p>
+<a href="#" class="btn btn-primary">View Live Stream</a>
+</div>
+</div>
+    </div>
+  </div>
+    <div class="card-deck-wrapper">
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card">
+<img class="card-img-top" src="..." alt="Card image cap">
+<div class="card-block">
+<h4 class="card-title">Card title</h4>
+<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<a href="#" class="btn btn-primary">Go somewhere</a>
+</div>
+</div>
+<div class="card">
+<img class="card-img-top">
+<div class="card-block">
+<h4 class="card-title">User Name</h4>
+<p class="card-text">Content of users current live stream</p>
+<a href="#" class="btn btn-primary">View Live Stream</a>
+</div>
+</div>
+<div class="card">
+<img class="card-img-top">
+<div class="card-block">
+<h4 class="card-title">User Name</h4>
+<p class="card-text">Content of users current live stream</p>
+<a href="#" class="btn btn-primary">View Live Stream</a>
+</div>
+</div>
+  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
         <div class="tab-pane fade" id="online" role="tabpanel">
           <p> content for first pill </p>
         </div>
@@ -74,8 +156,7 @@
 </div>
 </div>
 </div>
-</div>
-</div>
+
 
 
 
