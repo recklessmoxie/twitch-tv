@@ -22,7 +22,7 @@
   <div class="container">
     <div class="card" id="main">
       <div class="card-header">
-        <ul class="nav nav-tabs card-header-tabs" id="myTab">
+        <ul class="nav nav-tabs card-header-tabs" id="statusTabs">
           <li class="nav-item active d-inline-block">
             <a class="nav-link" data-toggle="tab" title="All Streamers" href="#all" role="tab">
               <span class="round-tabs one">
@@ -53,17 +53,16 @@
           </li>
         </ul>
       </div>
-
       <div class="tab-content text-xs-center">
         <div class="tab-pane fade active" id="all" role="tabpanel">
-          <div class="card status" id="status">
+          <div class="card status" id="status-header">
             <div class="card-block">
               <h4 class="card-title text-xs-center">Twitch Status</h4>
               <p class="card-text">View Twitch streamers sorted by current status using the icons above, or click below for all users.</p>
               <a class="btn btn-success users" href="#all-users">All Users</a>
             </div>
           </div>
-          <div class="card all-users" id="all-users">
+          <div class="card all-users" id="all-users-wrapper">
             <div class="card-block">
               <button type="button" id="close" class="close pull-xs-right" aria-label="Close"><span aria-hidden="true">&times;</span>
             </button>
@@ -71,155 +70,27 @@
             </div>
             <div class="card-deck-wrapper">
               <div class="card-deck">
-                <div class="card">
-                  <img class="card-img-top">
-                  <div class="card-block">
-                    <h4 class="card-title text-xs-center">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
+                <div class="card" id="all-users">
                 </div>
-                <div class="card">
-                  <img class="card-img-top">
-                  <div class="card-block">
-                    <h4 class="card-title text-xs-center">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-                <div class="card">
-                  <img class="card-img-top">
-                  <div class="card-block">
-                    <h4 class="card-title text-xs-center">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-                <div class="card">
-                  <img class="card-img-top">
-                  <div class="card-block">
-                    <h4 class="card-title text-xs-center">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
                 </div>
               </div>
-            </div>
-            <div class="card-deck-wrapper">
-              <div class="card-deck">
-                <div class="card">
-                  <img class="card-img-top">
-                  <div class="card-block">
-                    <h4 class="card-title text-xs-center">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-                <div class="card">
-                  <img class="card-img-top">
-                  <div class="card-block">
-                    <h4 class="card-title text-xs-center">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-                <div class="card">
-                  <img class="card-img-top">
-                  <div class="card-block">
-                    <h4 class="card-title text-xs-center">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-                <div class="card">
-                  <img class="card-img-top">
-                  <div class="card-block">
-                    <h4 class="card-title text-xs-center">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+    </div>
         <div class="tab-pane fade" id="online" role="tabpanel">
           <div class="card all-users" id="online-users">
             <div class="card-block">
-              <h4 class="card-title text-xs-center">Currently Live Streaming</h4>
+              <h4 class="card-title text-xs-center">Currently Live Streaming</h4> <br>
+            <div id="nothing">
+              <img src="assets/giphy.gif">
+                <h4 class="nobody"> Nobody is online right now </h4>
+            </div>
             </div>
             <div class="card-deck-wrapper">
               <div class="card-deck">
-                <div class="card">
-                  <img class="card-img-top img-thumbnail">
-                  <div class="card-block">
-                    <h4 class="card-title text-xs-center">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
+                <div class="card" id="test-1">
                 </div>
-                <div class="card">
-                  <img class="card-img-top">
-                  <div class="card-block">
-                    <h4 class="card-title text-xs-center">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
                 </div>
-                <div class="card">
-                  <img class="card-img-top">
-                  <div class="card-block">
-                    <h4 class="card-title text-xs-center">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-                <div class="card">
-                  <img class="card-img-top">
-                  <div class="card-block">
-                    <h4 class="card-title text-xs-center">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-          </div>
-        </div>
-        <div class="card-deck-wrapper">
-          <div class="card-deck">
-            <div class="card">
-              <img class="card-img-top img-thumbnail">
-              <div class="card-block">
-                <h4 class="card-title text-xs-center">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
-            </div>
-            <div class="card">
-              <img class="card-img-top">
-              <div class="card-block">
-                <h4 class="card-title text-xs-center">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-            <div class="card">
-              <img class="card-img-top">
-              <div class="card-block">
-                <h4 class="card-title text-xs-center">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-            <div class="card">
-              <img class="card-img-top">
-              <div class="card-block">
-                <h4 class="card-title text-xs-center">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-      </div>
-    </div>
       </div>
     </div>
         <div class="tab-pane fade" id="offline" role="tabpanel">
@@ -229,161 +100,29 @@
           </div>
           <div class="card-deck-wrapper">
             <div class="card-deck">
-              <div class="card">
-                <img class="card-img-top img-thumbnail">
-                <div class="card-block">
-                  <h4 class="card-title text-xs-center">Card title</h4>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
+              <div class="card" id="test-2">
               </div>
-              <div class="card">
-                <img class="card-img-top">
-                <div class="card-block">
-                  <h4 class="card-title text-xs-center">Card title</h4>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
               </div>
-              <div class="card">
-                <img class="card-img-top">
-                <div class="card-block">
-                  <h4 class="card-title text-xs-center">Card title</h4>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top">
-                <div class="card-block">
-                  <h4 class="card-title text-xs-center">Card title</h4>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-        </div>
-      </div>
-      <div class="card-deck-wrapper">
-        <div class="card-deck">
-          <div class="card">
-            <img class="card-img-top img-thumbnail">
-            <div class="card-block">
-              <h4 class="card-title text-xs-center">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
-          </div>
-          <div class="card">
-            <img class="card-img-top">
-            <div class="card-block">
-              <h4 class="card-title text-xs-center">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card-img-top">
-            <div class="card-block">
-              <h4 class="card-title text-xs-center">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card-img-top">
-            <div class="card-block">
-              <h4 class="card-title text-xs-center">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
     </div>
   </div>
-        </div>
-        </div>
         <div class="tab-pane fade" id="noAcct" role="tabpanel">
           <div class="card all-users" id="noAcct-users">
             <div class="card-block">
           <h4 class="card-title text-xs-center">No Account</h4>
-          <p class="card-text"> These user-names do not currently have a valid Twitch account. </p>
+          <p class="card-text"> These users do not currently have a valid Twitch account. </p>
         </div>
         <div class="card-deck-wrapper">
           <div class="card-deck">
-            <div class="card">
-              <img class="card-img-top img-thumbnail">
-              <div class="card-block">
-                <h4 class="card-title text-xs-center">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
+            <div class="card" id="test-3">
             </div>
-            <div class="card">
-              <img class="card-img-top">
-              <div class="card-block">
-                <h4 class="card-title text-xs-center">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
             </div>
-            <div class="card">
-              <img class="card-img-top">
-              <div class="card-block">
-                <h4 class="card-title text-xs-center">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-            <div class="card">
-              <img class="card-img-top">
-              <div class="card-block">
-                <h4 class="card-title text-xs-center">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-      </div>
-    </div>
-    <div class="card-deck-wrapper">
-      <div class="card-deck">
-        <div class="card">
-          <img class="card-img-top img-thumbnail">
-          <div class="card-block">
-            <h4 class="card-title text-xs-center">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top">
-          <div class="card-block">
-            <h4 class="card-title text-xs-center">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top">
-          <div class="card-block">
-            <h4 class="card-title text-xs-center">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top">
-          <div class="card-block">
-            <h4 class="card-title text-xs-center">Card title</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
   </div>
 </div>
-      </div>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
