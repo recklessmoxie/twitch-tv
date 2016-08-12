@@ -1,7 +1,7 @@
 body {
   background: url("http://res.cloudinary.com/recklessmoxie/image/upload/q_100/v1470446769/blue_ivvwzq.png"); }
 
-#main {
+/*#main {
   margin-left: auto;
   margin-right: auto;
   margin-top: 80px;
@@ -9,9 +9,9 @@ body {
   background-color: #9575CD;
   -webkit-box-shadow: -12px 8px 14px -6px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -12px 8px 14px -6px rgba(0, 0, 0, 0.75);
-  box-shadow: -12px 8px 14px -6px rgba(0, 0, 0, 0.75); }
+  box-shadow: -12px 8px 14px -6px rgba(0, 0, 0, 0.75); }*/
 
-li.nav-item {
+/*li.nav-item {
   margin-top: .5em; }
 
 #heading {
@@ -85,6 +85,4 @@ span.round-tabs:hover {
   color: rgba(0, 0, 0, 0.54); }
 
 .nobody {
-  font-family: "Source Code Pro", monospace; }
-
-/*# sourceMappingURL=style.css.map */
+  font-family: "Source Code Pro", monospace; }*/
