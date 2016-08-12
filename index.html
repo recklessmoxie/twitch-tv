@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@recklessmoxie">
   <meta name="twitter:title" content="Twitch-Tv API Project">
@@ -12,128 +10,77 @@
   <meta name="twitter:image" content="">
   <meta name="twitter:image:alt" content="Screen shot of the Twitch-Tv API Project">
   <title>Twitch-Tv API Project</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/mdb.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900|Source+Code+Pro" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-
-
-<body>
-  <section class="container" id="main">
-    <ul class="nav nav-tabs" id="statusTabs">
-    <div class="row" id="heading">
-        <div class="col-xs-3 col-lg-2 offset-lg-1 head-tabs">
-          <li class="nav-item active">
-            <a class="nav-link" data-toggle="tab" title="All Streamers" href="#all" role="tab">
-              <span class="round-tabs one">
-              <img class="img-fluid" src="assets/all-users.png">
-            </span>
-            </a>
-          </li>
-        </div>
-          <div class="col-xs-3 col-lg-2 offset-lg-1 head-tabs">
+  <body>
+  <div class="container" id="main">
+    <ul class="nav nav-tabs tabs-4 red" role="tablist">
           <li class="nav-item">
-            <a class="nav-link online" data-toggle="tab" title="Online" href="#online" role="tab">
-              <span class="round-tabs two">
-              <img class="img-fluid" src="assets/user-online.png">
-              </span>
+            <a class="nav-link active" data-toggle="tab" href="#panel1" role="tab">
             </a>
           </li>
-        </div>
-        <div class="col-xs-3 col-lg-2 offset-lg-1 head-tabs">
           <li class="nav-item">
-            <a class="nav-link offline" data-toggle="tab" title="Offline" href="#offline" role="tab">
-              <span class="round-tabs three">
-              <img class="img-fluid" src="assets/user-offline.png">
-            </span>
+            <a class="nav-link" data-toggle="tab" href="#panel2" role="tab">
             </a>
           </li>
-        </div>
-        <div class="col-xs-3 col-lg-2 offset-lg-1 head-tabs">
           <li class="nav-item">
-            <a class="nav-link noAcct" data-toggle="tab" title="No Account" href="#noAcct" role="tab">
-              <span class="round-tabs four">
-            <img class="img-fluid" src="assets/no-account.png">
-          </span>
+            <a class="nav-link" data-toggle="tab"  href="#panel3" role="tab">
             </a>
           </li>
-      </div>
-      </div>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#panel4" role="tab">
+            </a>
+          </li>
       </ul>
-      <div class="tab-content text-xs-center">
-        <div class="tab-pane fade active" id="all" role="tabpanel">
-          <div class="card status" id="status-header">
-            <div class="card-block">
-              <h4 class="card-title text-xs-center">Twitch Status</h4>
-              <p class="card-text">View Twitch streamers sorted by current status using the icons above, or click below for all users.</p>
+      <div class="tab-content card">
+        <div class="tab-pane fade in active" id="panel1" role="tabpanel">
+          <br>
+              <h4 class="text-xs-center">Twitch Status</h4>
+              <p>Test 1</p>
               <a class="btn btn-success users" href="#all-users">All Users</a>
-            </div>
           </div>
-          <div class="card all-users" id="all-users-wrapper">
-            <div class="card-block">
-              <button type="button" id="close" class="close pull-xs-right" aria-label="Close"><span aria-hidden="true">&times;</span>
-            </button>
-              <h4 class="card-title text-xs-center">All Twitch Streamers</h4>
+          <div class="tab-pane fade" id="panel2" role="tabpanel">
+            <br>
+                <h4 class="text-xs-center">Twitch Status</h4>
+                <p>Test 2.</p>
             </div>
-            <div class="card-deck-wrapper">
-              <div class="card-deck">
-                <div class="card" id="all-users">
-                </div>
-                </div>
+            <div class="tab-pane fade" id="panel3" role="tabpanel">
+              <br>
+                  <h4 class="text-xs-center">Twitch Status</h4>
+                  <p>test 3</p>
               </div>
-      </div>
-    </div>
-        <div class="tab-pane fade" id="online" role="tabpanel">
-          <div class="card all-users" id="online-users">
-            <div class="card-block">
-              <h4 class="card-title text-xs-center">Currently Live Streaming</h4> <br>
-            <div id="nothing">
-              <img src="assets/giphy.gif">
-                <h4 class="nobody"> Nobody is online right now </h4>
-            </div>
-            </div>
-            <div class="card-deck-wrapper">
-              <div class="card-deck">
-                <div class="card" id="test-1">
-                </div>
+              <div class="tab-pane fade" id="panel4" role="tabpanel">
+                <br>
+                    <h4 class="text-xs-center">Twitch Status</h4>
+                    <p>test 4</p>
                 </div>
               </div>
-      </div>
-    </div>
-        <div class="tab-pane fade" id="offline" role="tabpanel">
-          <div class="card all-users" id="offline-users">
-            <div class="card-block">
-              <h4 class="card-title text-xs-center">Currently Offline</h4>
-          </div>
-          <div class="card-deck-wrapper">
-            <div class="card-deck">
-              <div class="card" id="test-2">
-              </div>
-              </div>
             </div>
-    </div>
-  </div>
-        <div class="tab-pane fade" id="noAcct" role="tabpanel">
-          <div class="card all-users" id="noAcct-users">
-            <div class="card-block">
-          <h4 class="card-title text-xs-center">No Account</h4>
-          <p class="card-text"> These users do not currently have a valid Twitch account. </p>
-        </div>
-        <div class="card-deck-wrapper">
-          <div class="card-deck">
-            <div class="card" id="test-3">
-            </div>
-            </div>
-          </div>
-  </div>
-</div>
-</div>
-</section>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.3/js/bootstrap.min.js"></script>
-  <script src="app.js"></script>
+
+<!--
+            <span class="round-tabs two">
+            <img class="img-fluid" src="assets/user-online.png">
+            </span>
+            <span class="round-tabs one">
+            <img class="img-fluid" src="assets/all-users.png">
+          </span>
+          <span class="round-tabs three">
+          <img class="img-fluid" src="assets/user-offline.png">
+        </span>
+        <span class="round-tabs four">
+        <img class="img-fluid" src="assets/no-account.png">
+        </span> -->
+
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="js/tether.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
 </body>
 
 </html>
