@@ -19,33 +19,68 @@
   <div class="container">
     <div class="row">
     <div class="col s12">
-      <div class="card large" id="main">
-        <ul class="collapsible" data-collapsible="accordion">
+      <div class="card-panel hoverable dark-grey-indigo" id="main">
+        <ul class="collapsible popout" data-collapsible="expandible">
           <li>
-            <div class="collapsible-header active dark-grey-indigo"><i class="fa fa-twitch light-grey-indigo-text"></i><span class="light-grey-indigo-text" id="first">Twitch Status</span></div>
+            <div class="collapsible-header active grey-indigo"><i class="fa fa-twitch light-grey-indigo-text"></i><span class="light-grey-indigo-text" id="first">Twitch Status</span></div>
             <div class="collapsible-body mid-grey-indigo"><p class="light-grey-indigo-text">Choose a section below to view streamers by current status</p></div>
           </li>
           <li>
           <div class="collapsible-header grey-indigo">
-          <i class="material-icons green-text text-accent-2">ondemand_video</i><span class="light-grey-indigo-text">Online</span></div>
-          <div class="collapsible-body mid-grey-indigo"><p class="light-grey-indigo-text">Placeholder content</p></div>
-          </li>
+          <i class="material-icons light-grey-indigo-text online-icon">ondemand_video</i><span class="light-grey-indigo-text online-icon ">Online</span></div>
+          <div class="collapsible-body mid-grey-indigo">
+            <ul class="collection">
+    <li class="collection-item avatar">
+      <img src="assets/user-online.png" alt="online" class="circle">
+      <span class="title blue-text text-darken-4">Title</span>
+      <p class="blue-text text-darken-3">First Line <br>
+         Second Line
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons yellow-text text-lighten-2">ondemand_video</i></a>
+    </li>
+    <li class="collection-item avatar">
+      <img src="assets/user-online.png" alt="online" class="circle">
+      <span class="title">Title</span>
+      <p>First Line <br>
+         Second Line
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons yellow-text text-lighten-2">ondemand_video</i></a>
+    </li>
+    <li class="collection-item avatar">
+      <img src="assets/user-online.png" alt="online" class="circle">
+      <span class="title">Title</span>
+      <p>First Line <br>
+         Second Line
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons yellow-text text-lighten-2">ondemand_video</i></a>
+    </li>
+    <li class="collection-item avatar">
+      <img src="assets/user-online.png" alt="online" class="circle">
+      <span class="title">Title</span>
+      <p>First Line <br>
+         Second Line
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons yellow-text text-lighten-2">ondemand_video</i></a>
+    </li>
+  </ul>
+          </div>
+        </li>
         <li>
-        <div class="collapsible-header amber darken-1">
-          <i class="material-icons amber-text text-lighten-5">access_time</i><span class="amber-text text-lighten-5">Offline</span></div>
-          <div class="collapsible-body amber lighten-4"><p> Placeholder content</p>
+        <div class="collapsible-header grey-indigo">
+          <i class="material-icons light-grey-indigo-text offline-icon">access_time</i><span class="light-grey-indigo-text offline-icon">Offline</span></div>
+            <div class="collapsible-body mid-grey-indigo"><p class="light-grey-indigo-text">Placeholder content</p>
           </div>
       </li>
       <li>
-      <div class="collapsible-header red darken-1">
-        <i class="material-icons red-text text-lighten-5">error_outline</i><span class="red-text text-lighten-5">No Account</span></div>
-        <div class="collapsible-body red lighten-4"><p> Placeholder content</p>
+      <div class="collapsible-header grey-indigo">
+        <i class="material-icons light-grey-indigo-text no-acct-icon">error_outline</i><span class="light-grey-indigo-text no-acct-icon">No Account</span></div>
+        <div class="collapsible-body mid-grey-indigo"><p class="light-grey-indigo-text">Placeholder content</p>
         </div>
       </li>
       <li>
-        <div class="collapsible-header light-blue darken-1">
-          <i class="material-icons light-blue-text text-lighten-5">group</i><span class="light-blue-text text-lighten-5">All Streamers</span></div>
-        <div class="collapsible-body light-blue lighten-4"><p> Placeholder content</p>
+        <div class="collapsible-header grey-indigo">
+          <i class="material-icons light-grey-indigo-text all-streamers-icon">group</i><span class="light-grey-indigo-text all-streamers-icon">All Streamers</span></div>
+        <div class="collapsible-body mid-grey-indigo"><p class="light-grey-indigo-text"> Placeholder content</p>
         </div>
       </li>
     </ul>
