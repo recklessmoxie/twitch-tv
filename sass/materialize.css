@@ -6326,24 +6326,41 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 @media (min-height: 40.125em) {
   .picker--time .picker__box {
     margin-bottom: 5em; } }
-body {
-  background: url("https://d13yacurqjgara.cloudfront.net/users/108482/screenshots/1355879/attachments/193117/Space-Desktop.jpg") no-repeat;
+html {
+  background: url("https://d13yacurqjgara.cloudfront.net/users/108482/screenshots/1355879/attachments/193117/Space-Desktop.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover; }
 
 .fa {
-  font-size: 1.8rem !important; }
+  font-size: 1.6rem !important; }
 
 .fa:hover {
-  color: white !important; }
+  color: #bf00f9 !important; }
 
-.material-icons:hover {
-  color: white !important; }
+span.online-icon:hover, i.online-icon:hover {
+  color: #fff176 !important; }
 
-span {
+span.offline-icon:hover, i.offline-icon:hover {
+  color: #ffb74d !important; }
+
+span.no-acct-icon:hover, i.no-acct-icon:hover {
+  color: #ff4081 !important; }
+
+span.all-streamers-icon:hover, i.all-streamers-icon:hover {
+  color: #448aff !important; }
+
+span.online-icon, span.offline-icon, span.no-acct-icon, span.all-streamers-icon {
   font-family: "Playfair Display";
   font-weight: 400;
   font-size: 1.4rem;
   font-variant: small-caps; }
+
+#collection-title {
+  font-family: "Playfair Display";
+  font-weight: 400;
+  font-size: 1.4rem; }
 
 p {
   font-family: "Source Code Pro";
@@ -6355,12 +6372,14 @@ p {
   font-size: 1.8rem;
   font-variant: small-caps; }
 
+#first:hover {
+  color: #bf00f9 !important; }
+
 span:hover {
-  color: white !important; }
+  color: white; }
 
 #main {
-  margin-top: 8rem;
-  background-color: transparent; }
+  margin-top: 150px; }
 
 .dark-grey-indigo {
   background-color: #101525 !important; }
