@@ -40,9 +40,75 @@
 @import "components/date_picker/default.time";
 
 body {
-  background: url("http://res.cloudinary.com/recklessmoxie/image/upload/q_100/v1470446769/blue_ivvwzq.png");
+  background: url("https://d13yacurqjgara.cloudfront.net/users/108482/screenshots/1355879/attachments/193117/Space-Desktop.jpg") no-repeat;
+  background-size: cover;
 }
 
 .fa {
-  font-size: 2.0rem !important;
+  font-size: 1.8rem !important;
+}
+
+.fa:hover {
+  color: white !important;
+}
+
+.material-icons:hover {
+  color: white !important;
+}
+
+span {
+  font-family: "Playfair Display";
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-variant: small-caps;
+}
+
+p {
+  font-family: "Source Code Pro";
+  font-size: 1.4rem;
+}
+
+#first {
+  font-family: "Playfair Display";
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-variant: small-caps;
+}
+
+span:hover {
+  color: white !important;
+}
+
+#main {
+  margin-top: 8rem;
+  background-color: transparent;
+}
+
+.dark-grey-indigo {
+  background-color: #101525 !important;
+}
+
+.grey-indigo {
+  background-color: #1C2237 !important;
+}
+
+.mid-grey-indigo {
+  background-color: #1F2740 !important;
+}
+
+.light-grey-indigo-text {
+  color: #9AA4C1 !important;
+}
+
+.collapsible {
+  border:none;
+ }
+
+.collapsible-header {
+  background-color: transparent;
+  border: none;
+}
+
+.collapsible-body {
+  border: none;
 }
