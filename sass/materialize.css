@@ -6337,30 +6337,30 @@ html {
   font-size: 1.6rem !important; }
 
 .fa:hover {
-  color: #bf00f9 !important; }
+  color: #a816d4 !important; }
 
 span.online-icon:hover, i.online-icon:hover {
-  color: #fff176 !important; }
+  color: #00e5ff !important; }
 
 span.offline-icon:hover, i.offline-icon:hover {
-  color: #ffb74d !important; }
+  color: #f5960b !important; }
 
 span.no-acct-icon:hover, i.no-acct-icon:hover {
-  color: #ff4081 !important; }
+  color: #e6316f !important; }
 
 span.all-streamers-icon:hover, i.all-streamers-icon:hover {
-  color: #448aff !important; }
+  color: #f4dc0a !important; }
 
 span.online-icon, span.offline-icon, span.no-acct-icon, span.all-streamers-icon {
   font-family: "Playfair Display";
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-variant: small-caps; }
 
-#collection-title {
+.collection .collection-item.avatar .title {
   font-family: "Playfair Display";
   font-weight: 400;
-  font-size: 1.4rem; }
+  font-size: 1.8rem; }
 
 p {
   font-family: "Source Code Pro";
@@ -6373,13 +6373,10 @@ p {
   font-variant: small-caps; }
 
 #first:hover {
-  color: #bf00f9 !important; }
-
-span:hover {
-  color: white; }
+  color: #a816d4 !important; }
 
 #main {
-  margin-top: 150px; }
+  margin-top: 125px; }
 
 .dark-grey-indigo {
   background-color: #101525 !important; }
