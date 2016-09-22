@@ -6343,10 +6343,10 @@ span.online-icon:hover, i.online-icon:hover {
   color: #00e5ff !important; }
 
 span.offline-icon:hover, i.offline-icon:hover {
-  color: #f5960b !important; }
+  color: #e6316f !important; }
 
 span.no-acct-icon:hover, i.no-acct-icon:hover {
-  color: #e6316f !important; }
+  color: #f5960b !important; }
 
 span.all-streamers-icon:hover, i.all-streamers-icon:hover {
   color: #f4dc0a !important; }
@@ -6360,7 +6360,30 @@ span.online-icon, span.offline-icon, span.no-acct-icon, span.all-streamers-icon 
 .collection .collection-item.avatar .title {
   font-family: "Playfair Display";
   font-weight: 400;
-  font-size: 1.8rem; }
+  font-size: 1.8rem;
+  margin-left: 2.5rem; }
+
+.collection .collection-item.avatar .circle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  overflow: visible;
+  left: 0;
+  margin-left: 1.5rem;
+  margin-top: 2.0rem;
+  margin-right: 1.0rem; }
+
+.online-img {
+  border: 2px solid #00e5ff; }
+
+.offline-img {
+  border: 2px solid #e6316f; }
+
+.no-acct-img {
+  border: 2px solid #f5960b; }
+
+.all-users-img {
+  border: 2px solid #f4dc0a; }
 
 p {
   font-family: "Source Code Pro";
