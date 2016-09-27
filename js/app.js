@@ -36,6 +36,7 @@ function queryChannelState(channel) {
       streamsData = parseResponse(data); // examine server response.
       allData.message = streamsData.message; // package 'message' into AllData object.
       allData.status = streamsData.status; // package 'status' into AllData object.
+      console.log(data);
     });
 }
 queryChannelState();
