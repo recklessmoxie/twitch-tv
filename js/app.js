@@ -1,177 +1,97 @@
-var channels = ["freecodecamp", "JackeL", "cretetion", "Septimus",
+var clientId = 'o1kvlcroy4pq738ph1q94joc8qcypz5';
+var streamers = ["freecodecamp", "JackeL", "cretetion", "Septimus",
   "brunofin", "comster404", "RobotCaleb", "jondcoleman",
   "thomasballinger", "noobs2ninjas", "beohoff", "monstercat"
 ];
+var allStreamers = $("#allStreamers");
+var onlineStreamers = $("#onlineStreamers");
+var offlineStreamers = $("#offlineStreamers");
+var invalidStreamers = $("#invalidStreamers");
 
-var streamerStatus = function () {
+$(document).ready(function () {
+  $.each(streamers, function (i) {
+    var channelName = streamers[i];
+    checkStream(channelName);
+  });
+});
 
-  $.each(channels, function (i, accountName) {
-
-    var url = 'https://api.twitch.tv/kraken/streams/' + accountName;
-
-    $.ajaxSetup({
-
-      type: 'GET',
-      url: url,
-      headers: {
-        'Client-ID': 'o1kvlcroy4pq738ph1q94joc8qcypz5'
+function checkStream(channel) {
+  $.ajax({
+    url: 'https://api.twitch.tv/kraken/streams/' + channel + "?client_id=" +
+      clientId + "&callback=?",
+    dataType: 'jsonp',
+    headers: {
+      'Client-ID': clientId
+    },
+    success: function (data) {
+      console.log(data);
+      if (data.stream) {
+        var name = data.stream.channel.display_name;
+        var logo = data.stream.channel.logo;
+        var stream = data.stream.game;
+        var url = data.stream.channel.url;
+        var status = data.stream.channel.status;
+        displayStream(name, logo, stream, url, status);
+      } else if (data.error) {
+        invalidStreamers.append(
+          "<ul class='collection'><li class='collection-item avatar indigo lighten-5'><img src='assets/caution.png' alt='no account' class='no-acct-img circle'><span class='title blue-text text-darken-3'>" +
+          channel +
+          "</span><p class='blue-text text-darken-1'>Invalid or Unavailable Account</p><a href='#' class='secondary-content'><i class='material-icons orange-text text-accent4'>error_outline</i></a></li></ul>"
+        );
+      } else {
+        getProfile(channel);
       }
-    });
-
-    $.ajax({
-
-      success: function (data) {
-
-        console.log(data);
-
-        if (data.status === 404) {
-          $("#rezultat").append("<li class='response'>" + data.message +
-            " <i class=' glyphicon glyphicon-ban-circle'></i></li>"
-          )
-
-        } else if (data.status === 422) {
-
-          $("#rezultat").append(
-            "<li class='response'> <img src='http://www.coverbash.com/wp-content/themes/covers/images/blank_profile_pic.jpg'>" +
-            data.message + "</li>")
-
-        } else if (data.stream === null) {
-
-          var url1 = 'https://api.twitch.tv/kraken/channels/' +
-            accountName
-
-          $.ajax({
-
-            url: url1,
-
-            success: function (data1) {
-              $("#online").append(
-                '<ul class="collection"><li class="collection-item avatar indigo lighten-5"><a target="_blank" href=" ' +
-                data.stream
-                .channel.url + '"><img src=" ' +
-                data.stream.channel.logo +
-                '" alt="online" class="online-img circle"><span class="title blue-text text-darken-3">' +
-                data.stream.channel.display_name +
-                '</span><p class="blue-text text-darken-1">' +
-                data.stream.channel.game + '<br>' +
-                '</p><a href="' +
-                data.url +
-                '" target="_blank" class="secondary-content"><i class="material-icons cyan-text text-accent-3">ondemand_video</i></a></li></ul>'
-              )
-            }
-          });
-
-          //     }'
-
-        } else {
-          $("#rezultat").append("<a target='_blank' href='" + data.stream
-            .channel.url +
-            "'><li class='online response'> <img src='" + data.stream
-            .channel.logo + "'>" + data.stream.channel.display_name +
-            ": " + data.stream.channel.game +
-            " <i style='color:green' class=' glyphicon glyphicon-ok'></i></li></a>"
-          )
-
-        }
-
-      },
-      error: function (data) {
-        console.log("many fail");
-      }
-
-    });
-
-  })
-
-}
-
-var active = function () {
-  $.each(channels, function (i, accountName) {
-
-    var url = 'https://api.twitch.tv/kraken/streams/' + accountName;
-
-    $.ajax({
-      type: 'GET',
-      url: url,
-      headers: {
-        'Client-ID': 'o1kvlcroy4pq738ph1q94joc8qcypz5'
-      },
-      success: function (data) {
-
-        if (data.stream !== null) {
-          $("#rezultat").append("<a target='_blank' href='" + data.stream
-            .channel.url +
-            "'><li class='online response'> <img src='" + data.stream
-            .channel.logo + "'>" + data.stream.channel.display_name +
-            ": " + data.stream.channel.game +
-            " <i style='color:green' class=' glyphicon glyphicon-ok'></i></li></a>"
-          )
-        }
-
-      }
-    });
-
+    }
   });
 }
 
-var offline = function () {
-  $.each(channels, function (i, accountName) {
-
-    var url = 'https://api.twitch.tv/kraken/streams/' + accountName;
-
-    $.ajax({
-      type: 'GET',
-      url: url,
-      headers: {
-        'Client-ID': 'o1kvlcroy4pq738ph1q94joc8qcypz5'
-      },
-      success: function (data) {
-
-        if (data.stream == null && data.status !== 404 && data.status !==
-          422) {
-
-          var url1 = 'https://api.twitch.tv/kraken/channels/' +
-            accountName
-
-          $.ajax({
-            type: 'GET',
-            url: url1,
-            headers: {
-              'Client-ID': 'o1kvlcroy4pq738ph1q94joc8qcypz5'
-            },
-            success: function (data1) {
-              $("#rezultat").append(
-                "<li class='response'> <img src='" + data1.logo +
-                "'>" + data1.name +
-                " : <span style='color:gray'>offline</span>" +
-                "</li>")
-            }
-          });
-
-
-        }
-
-
+function getProfile(profile) {
+  var channel = "https://twitch.tv/" + profile + "/profile";
+  $.ajax({
+    url: 'https://api.twitch.tv/kraken/channels/' + profile + "?client_id=" +
+      clientId + "&callback=?",
+    dataType: 'jsonp',
+    headers: {
+      'Client-ID': clientId
+    },
+    success: function (data) {
+      var name = data.display_name;
+      if (data.status !== null) {
+        var status = data.status;
+      } else {
+        var status = "";
       }
-
-    });
-
-  })
+      if (data.logo !== null) {
+        var logo = data.logo;
+      } else {
+        var logo =
+          "assets/profle.png";
+      }
+      displayOffline(channel, name, status, logo);
+    }
+  });
 }
 
-streamerStatus();
+function displayOffline(channel, name, status, logo) {
+  offlineStreamers.append(
+    "<ul class='collection'><li class='collection-item avatar indigo lighten-5'><img src='" +
+    logo +
+    "' alt='offline' class='offline-img circle'><span class='title blue-text text-darken-3'>" +
+    name + "</span><p class='blue-text text-darken-1'> Offline <br>" + status +
+    "</p><a href='#!' class='secondary-content'><i class='material-icons pink-text text-accent-3'>access_time</i></a></li></ul>"
+  );
+}
 
-$("#svi").on("click", function () {
-  $("#rezultat").empty();
-  streamerStatus();
-});
-
-$("#aktivni").on("click", function () {
-  $("#rezultat").empty();
-  active();
-});
-
-$("#nedostupni").on("click", function () {
-  $("#rezultat").empty();
-  offline();
-});
+function displayStream(name, logo, stream, url, status) {
+  onlineStreamers.append(
+    "<ul class='collection'><li class='collection-item avatar indigo lighten-5'><img src='" +
+    logo +
+    "' alt='online' class='online-img circle'><span class='title blue-text text-darken-3'>" +
+    name +
+    "</span><p class='blue-text text-darken-1'>" +
+    status +
+    "</p><a href='" +
+    url +
+    "' target='_blank' class='secondary-content'><i class='material-icons cyan-text text-accent-3'>ondemand_video</i></a></li></ul>"
+  );
+}
