@@ -25,3 +25,6 @@
 
   <li> I will see a placeholder notification if a streamer has closed their Twitch account (or the account never existed). You can verify this works by adding brunofin and comster404 to your array of Twitch streamers.</li>
   </ul>
+
+<p>Please visit the live project by clicking the image below</p>
+<a href="www.recklessmoxie.com/twitchTv"<img src="assets/screenshot.png"></a>
