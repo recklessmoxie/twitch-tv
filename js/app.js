@@ -35,12 +35,12 @@ function checkStream(channel) {
         invalidStreamers.append(
             "<ul class='collection'><li class='collection-item avatar indigo lighten-5'><img src='assets/caution.png' alt='no account' class='no-acct-img circle'><span class='title blue-text text-darken-4'>" +
             channel +
-            "</span><p class='blue-text'>Invalid or Unavailable Account</p><a href='#' class='secondary-content'><i class='material-icons orange-text text-accent4'>error_outline</i></a></li></ul>"
+            "</span><p class='blue-text'>Invalid or Unavailable Account</p><a href='#' title='Invalid Account' class='secondary-content'><i class='material-icons orange-text text-accent4'>error_outline</i></a></li></ul>"
           ),
           allStreamers.append(
             "<ul class='collection'><li class='collection-item avatar indigo lighten-5'><img src='assets/caution.png' alt='no account' class='no-acct-img circle'><span class='title blue-text text-darken-4'>" +
             channel +
-            "</span><p class='blue-text'>Invalid or Unavailable Account</p><a href='#' class='secondary-content'><i class='material-icons orange-text text-accent4'>error_outline</i></a></li></ul>"
+            "</span><p class='blue-text'>Invalid or Unavailable Account</p><a href='#' title='Invalid Account' class='secondary-content'><i class='material-icons orange-text text-accent4'>error_outline</i></a></li></ul>"
           );
       } else {
         getProfile(channel);
@@ -84,7 +84,7 @@ function displayOffline(channel, name, status, logo) {
       "' alt='offline' class='offline-img circle'><span class='title blue-text text-darken-4'>" +
       name + "</span><p class='blue-text'> Current Status: Offline <br>" +
       status +
-      "</p><a href='#!' class='secondary-content'><i class='material-icons pink-text text-accent-3'>access_time</i></a></li></ul>"
+      "</p><a href='#!' title='Offline' class='secondary-content'><i class='material-icons pink-text text-accent-3'>access_time</i></a></li></ul>"
     ),
     allStreamers.append(
       "<ul class='collection'><li class='collection-item avatar indigo lighten-5'><img src='" +
@@ -92,7 +92,7 @@ function displayOffline(channel, name, status, logo) {
       "' alt='offline' class='offline-img circle'><span class='title blue-text text-darken-4'>" +
       name + "</span><p class='blue-text'> Current Status: Offline <br>" +
       status +
-      "</p><a href='#!' class='secondary-content'><i class='material-icons pink-text text-accent-3'>access_time</i></a></li></ul>"
+      "</p><a href='#!' title='Offline' class='secondary-content'><i class='material-icons pink-text text-accent-3'>access_time</i></a></li></ul>"
     );
 }
 
