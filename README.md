@@ -27,4 +27,4 @@
   </ul>
 
 <p>Please visit the live project by clicking the image below</p>
-<a href="www.recklessmoxie.com/twitchTv"<img src="assets/screenshot.png"></a>
+<a href="www.recklessmoxie.com/twitch-tv"><img src="assets/screenshot.png"></a>
