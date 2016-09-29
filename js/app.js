@@ -106,7 +106,7 @@ function displayStream(name, logo, stream, url, status) {
       status +
       "</p><a href='" +
       url +
-      "' target='_blank' class='secondary-content'><i class='material-icons cyan-text text-accent-3'>ondemand_video</i></a></li></ul>"
+      "' target='_blank' title='Go to Live Twitch Stream' class='secondary-content'><i class='material-icons cyan-text text-accent-3'>ondemand_video</i></a></li></ul>"
     ),
     allStreamers.append(
       "<ul class='collection'><li class='collection-item avatar indigo lighten-5'><img src='" +
@@ -117,6 +117,6 @@ function displayStream(name, logo, stream, url, status) {
       status +
       "</p><a href='" +
       url +
-      "' target='_blank' class='secondary-content'><i class='material-icons cyan-text text-accent-3'>ondemand_video</i></a></li></ul>"
+      "' target='_blank' title='Go to Live Twitch Stream' class='secondary-content'><i class='material-icons cyan-text text-accent-3'>ondemand_video</i></a></li></ul>"
     );
 }
