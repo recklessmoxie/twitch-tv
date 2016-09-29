@@ -80,21 +80,26 @@ span.all-streamers-icon:hover, i.all-streamers-icon:hover {
 
 .collection .collection-item.avatar .title {
   font-family: "Playfair Display";
-  font-weight: 400;
-  font-size: 1.8rem;
-  margin-left: 2.5rem;
+  font-weight: 900;
+  font-size: 1.4rem;
+  letter-spacing: .05rem;
+  margin-left: 1.75rem;
 }
 
 .collection .collection-item.avatar .circle {
   position: absolute;
-  width: 60px;
-  height: 60px;
-  overflow:visible;
+  width: 50px;
+  height: 50px;
+  overflow:hidden;
   left:0;
-  margin-left: 1.5rem;
+  margin-left: 1.25rem;
   margin-top: 2.0rem;
-  margin-right: 1.0rem;
+  margin-right: none;
   }
+
+.collection .collection-item:last-child {
+  border-bottom: 2px solid #d6d4d4;
+}
 
   .online-img {
     border: 2px solid #00e5ff;
@@ -114,13 +119,13 @@ span.all-streamers-icon:hover, i.all-streamers-icon:hover {
 
 p {
   font-family: "Source Code Pro";
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 #first {
   font-family: "Playfair Display";
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 2.0rem;
   font-variant: small-caps;
 }
 
@@ -150,7 +155,7 @@ p {
 }
 
 .collapsible {
-  border:none;
+  border: none;
  }
 
 .collapsible-header {
@@ -160,4 +165,6 @@ p {
 
 .collapsible-body {
   border: none;
+  height: 300px;
+  overflow-x: auto;
 }
